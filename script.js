@@ -6,24 +6,24 @@ const grid = document.querySelector('#grid');
 // gridSections.forEach(section => section.addEventListener('mouseenter', changeColour));
 
 const resetButtton = document.querySelector('#reset');
-resetButtton.addEventListener('click', resetBoard);
+resetButtton.addEventListener('click', resetGrid);
 
 
-createNewBoard(16);
+createNewGrid(16);
 
 function changeColour(event) {
     this.classList.add('hover');
 }; 
 
-function resetBoard(event) {
-    let size = +prompt("Next board size ", "16");
+function resetGrid(event) {
+    let size = +prompt("Next grid size ", "16");
 
     const gridSections = document.querySelectorAll('.grid-section');
     gridSections.forEach(section => section.remove());
-    createNewBoard(size);
+    createNewGrid(size);
 };
 
-function createNewBoard(size) {
+function createNewGrid(size) {
     for (let current = 0; current < (size*size); current++ ) {
         const gridSection = document.createElement('div');
         gridSection.classList.add('grid-section');
@@ -33,4 +33,7 @@ function createNewBoard(size) {
     const gridSections = document.querySelectorAll('.grid-section');
     gridSections.forEach(section => section.addEventListener('mouseenter', changeColour));
 
+    grid.style = `grid-template-columns: repeat(${size}, 1fr);`;
 };
+
+
