@@ -20,3 +20,7 @@ html {
     border: 1px solid black;
     
 }
+
+.hover {
+    background-color: red;
+}
