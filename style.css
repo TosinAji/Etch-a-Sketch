@@ -1,3 +1,11 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 
 #grid {
     display: grid;
@@ -10,6 +18,5 @@
     min-width: 50px;
     min-height: 50px;
     border: 1px solid black;
+    
 }
-
-/* I want to great a grid of divs 16 by 16, so I think I need to use css grids to arrange them */
