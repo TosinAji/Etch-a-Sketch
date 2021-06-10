@@ -8,18 +8,24 @@ html {
 }
 
 #grid {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
 }
 
 .grid-section {
     background-color: lightblue;
-    width: 6.25%;
-    min-height: 50px;
+    min-height: 20px;
     border: 1px solid black;
     
 }
 
 .hover {
     background-color: red;
+}
+
+#reset {
+    margin-left: 48%;
 }
