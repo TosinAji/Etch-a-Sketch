@@ -1,0 +1,15 @@
+
+#grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;    
+}
+
+.grid-section {
+    background-color: lightblue;
+    min-width: 50px;
+    min-height: 50px;
+    border: 1px solid black;
+}
+
+/* I want to great a grid of divs 16 by 16, so I think I need to use css grids to arrange them */
