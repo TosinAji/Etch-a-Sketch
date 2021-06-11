@@ -16,8 +16,11 @@ function changeColour(event) {
 }; 
 
 function resetGrid(event) {
-    let size = +prompt("Next grid size ", "16");
-
+    let size = +prompt("Next grid size (max size is 100)", "16");
+    while (size > 100 ) {
+        size = +prompt("Next grid size (max size is 100)", "16");
+    }
+    
     const gridSections = document.querySelectorAll('.grid-section');
     gridSections.forEach(section => section.remove());
     createNewGrid(size);
