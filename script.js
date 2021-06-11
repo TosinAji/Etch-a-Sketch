@@ -1,18 +1,15 @@
 'use script'
 
 const grid = document.querySelector('#grid');
-
-// const gridSections = document.querySelectorAll('.grid-section');
-// gridSections.forEach(section => section.addEventListener('mouseenter', changeColour));
-
 const resetButtton = document.querySelector('#reset');
 resetButtton.addEventListener('click', resetGrid);
-
 
 createNewGrid(16);
 
 function changeColour(event) {
-    this.classList.add('hover');
+    //change to a random hue
+    let hue = Math.floor(Math.random() * 360);
+    this.style = `background-color: hsl(${hue}, 100%, 75%)`;
 }; 
 
 function resetGrid(event) {
